@@ -3,12 +3,16 @@ kind: Deployment
 metadata:
   name: api
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: api
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8080"
       labels:
         app: api
     spec:
@@ -23,4 +27,4 @@ spec:
           resources:
             limits:
               memory: "64Mi"
-              cpu: "150m"
+              cpu: "64m"

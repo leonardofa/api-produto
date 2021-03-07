@@ -38,5 +38,5 @@ jobs:
           file: ./src/Dockerfile
           tags: |
             leonardofa/api-produto:latest
-            leonardofa/api-produto:${{ github.run_number }}
+            leonardofa/api-produto:v${{ github.run_number }}
           push: true

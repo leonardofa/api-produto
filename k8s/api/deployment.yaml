@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: leonardofa/api-produto:v1
+          image: leonardofa/api-produto
           ports:
             - containerPort: 8080
           env:
